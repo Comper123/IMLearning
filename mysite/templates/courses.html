@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Решения{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"> -->
+{% endblock %}
+
+{% block content %}
+    
+    {% for sol in solutions %}
+        <pre><code>{{ sol.code }}</code></pre>
+    {% endfor %}
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script> -->
+    <!-- <script>hljs.highlightAll();</script> -->
+{% endblock %}
